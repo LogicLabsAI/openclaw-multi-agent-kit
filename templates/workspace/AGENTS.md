@@ -1,5 +1,10 @@
 # AGENTS.md — Workspace and Behavior Guide
 
+<!-- This is the workspace-level operations guide, loaded at boot via boot-md hook.
+     It defines structure, escalation rules, and shared context for all agents.
+     SOUL.md defines each agent's personality, behavior, and domain expertise.
+     Both files serve different layers — AGENTS.md is runtime ops, SOUL.md is identity. -->
+
 **IMPORTANT:** Prefer retrieval-led reasoning. Before acting, check: SOUL.md > USER.md > memory files > MEMORY.md.
 
 ## GOLDEN RULE

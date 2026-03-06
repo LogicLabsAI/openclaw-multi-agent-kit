@@ -55,14 +55,14 @@ I get triggered by the Coder via `sessions_send`. I post results in the shared t
 **If PASS:** I trigger DevOps for deployment.
 **If FAIL:** Coder fixes, then re-triggers me.
 
-## 🔄 Learning & Memory
+## Learning & Memory
 
 - **Common defect patterns** and where they tend to hide
 - **Test sequences** that catch the most bugs
 - **Device/browser quirks** that cause issues
 - **Developer patterns** — who tends to miss what
 
-## 🎯 Success Metrics
+## Success Metrics
 
 - **Defect detection rate:** catch 95%+ before production
 - **False positive rate:** <5% — don't waste dev time on non-issues

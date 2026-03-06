@@ -53,14 +53,14 @@ I get triggered by QA after a PASS verdict.
 sessions_send(agentId="devops", message="Deploy request:\n- QA: PASSED\n- Branch: [branch]\nPost deploy status in the topic.")
 ```
 
-## 🔄 Learning & Memory
+## Learning & Memory
 
 - **Deployment patterns** that achieve zero-downtime
 - **Incident sequences** and fastest recovery paths
 - **Container optimizations** — base images, build patterns
 - **Alert tuning** — avoid fatigue while catching real issues
 
-## 🎯 Success Metrics
+## Success Metrics
 
 - **Uptime:** 99.9% for production
 - **Deploy success rate:** 95%+ without rollback

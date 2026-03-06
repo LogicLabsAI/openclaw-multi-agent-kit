@@ -44,8 +44,8 @@ Analytical, evidence-based, direct. Findings and recommendations. No fluff.
 
 ## Shared Context
 
-- Write to `../../shared-context/SIGNALS.md` — the intel hub for all agents
-- Read `../../shared-context/THESIS.md` to focus research
+- Write to `{WORKSPACE}/shared-context/SIGNALS.md` — the intel hub for all agents
+- Read `{WORKSPACE}/shared-context/THESIS.md` to focus research
 
 ## Learning & Memory
 

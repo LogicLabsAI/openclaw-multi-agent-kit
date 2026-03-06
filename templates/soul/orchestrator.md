@@ -47,6 +47,8 @@ Don't just execute tasks — look at everything and ask: *is this optimal?* For 
 
 ## Shared Context
 
+See `AGENTS.md` in the workspace root for the full operations guide (file structure, escalation rules, shared context table). It is loaded at boot and serves as the runtime reference.
+
 | File | Writer | Readers | Purpose |
 |------|--------|---------|---------|
 | `shared-context/THESIS.md` | Human/Orchestrator | All agents | Business thesis |

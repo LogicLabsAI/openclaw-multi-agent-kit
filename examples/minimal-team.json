@@ -61,7 +61,7 @@
               "groupPolicy": "open",
               "enabled": true,
               "topics": {
-                "TOPIC_BUILD": { "requireMention": false, "enabled": true }
+                "TOPIC_BUILD": { "requireMention": true, "enabled": true }
               }
             }
           }
