@@ -291,13 +291,26 @@ Telegram bots **cannot see each other's messages**. This is a Telegram platform 
 Agents communicate with each other using OpenClaw's `sessions_send`:
 
 ```
-sessions_send(agentId="TARGET_AGENT", message="Your message here")
+sessions_send(agentId="TARGET_AGENT", message="HANDOFF ...")
 ```
+
+Use the strict handoff format from [`docs/inter-agent-handoff-standard.md`](docs/inter-agent-handoff-standard.md).
+
+**Minimum required fields in every handoff:**
+- `from`
+- `to`
+- `task_id`
+- `priority`
+- `summary`
+- `context`
+- `deliver_to`
+- `deadline`
+- `done_when` (acceptance criteria)
 
 The receiving agent gets this as a new session input. They then post their response in the shared topic using the `message` tool:
 
 ```
-message(action="send", channel="telegram", target="GROUP_ID/TOPIC_NUMBER", message="Response here")
+message(action="send", channel="telegram", target="GROUP_ID/TOPIC_NUMBER", message="ACK <task_id> ...")
 ```
 
 ### Workflow example: Build Team

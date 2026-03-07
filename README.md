@@ -133,13 +133,18 @@ See [`INSTRUCTIONS.md`](INSTRUCTIONS.md) — a complete setup guide written spec
 
 ### Bot-to-Bot via sessions_send
 
-Telegram bots **cannot** see each other's messages. This is a Telegram limitation. Use OpenClaw's `sessions_send` to trigger teammates:
+Telegram bots **cannot** see each other's messages. This is a Telegram limitation. Use OpenClaw's `sessions_send` to trigger teammates.
+
+Use the enforced handoff format documented here:
+- [Inter-Agent Handoff Standard](docs/inter-agent-handoff-standard.md)
+
+Quick example:
 
 ```
-sessions_send(agentId="qa-agent", message="QA request:\n- What: [description]\n- Where: [URL/path]\nPost your verdict in the topic.")
+sessions_send(agentId="qa-agent", message="HANDOFF\nfrom: coder\nto: qa\ntask_id: build-142\npriority: P1\nsummary: Validate checkout fix\ncontext: branch=fix/coupon-rounding\ndeliver_to: telegram:-1001234567890:13\ndeadline: asap\ndone_when:\n- Repro no longer fails\n- Regression checks pass")
 ```
 
-The receiving agent gets the message as a new session input and can then post their response in the shared topic using the `message` tool.
+The receiving agent gets the message as a new session input and posts ACK + DONE updates in the shared topic.
 
 ### Shared Context via Files
 

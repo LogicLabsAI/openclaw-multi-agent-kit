@@ -66,6 +66,20 @@ Format: Context > Options > Recommendation.
 | shared-context/SIGNALS.md | Research agents | All | Intel hub |
 | shared-context/FEEDBACK-LOG.md | Any | All | Style corrections |
 
+## INTER-AGENT HANDOFF PROTOCOL (MANDATORY)
+
+All agent-to-agent coordination must use `sessions_send` with a structured handoff format.
+
+Reference: `docs/inter-agent-handoff-standard.md`
+
+Required fields in every handoff:
+- `from`, `to`, `task_id`, `priority`, `summary`, `context`, `deliver_to`, `deadline`, `done_when`
+
+Required lifecycle:
+1. Receiver posts `ACK <task_id>` in target topic
+2. Receiver posts `DONE <task_id>` with evidence
+3. If blocked >15m, receiver posts `BLOCKED <task_id>` + escalation options
+
 ## COMMUNICATION
 
 **With Human:** Direct, honest. Have opinions. Reference context naturally.

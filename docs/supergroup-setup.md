@@ -61,7 +61,7 @@ Key concepts:
 1. Restart OpenClaw: `openclaw restart`
 2. Send a message in each topic
 3. Verify the correct bot responds
-4. Test `sessions_send` between agents
+4. Test `sessions_send` between agents using the structured format in `docs/inter-agent-handoff-standard.md`
 
 ## Troubleshooting
 
