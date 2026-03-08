@@ -2,6 +2,8 @@
 
 Step-by-step guide to setting up a Telegram supergroup for your agent team.
 
+If you are using **forum topics inside a Telegram direct chat** instead of a supergroup, see [telegram-dm-topics.md](telegram-dm-topics.md).
+
 ## Prerequisites
 
 - A Telegram account

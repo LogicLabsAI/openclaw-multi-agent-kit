@@ -189,6 +189,7 @@ The receiving agent gets the message as a new session input and posts ACK + DONE
 - [INSTRUCTIONS.md](INSTRUCTIONS.md) — **AI-readable setup guide** (give this to your agent)
 - [Agent Design Patterns](docs/agent-design-patterns.md) — How to write effective SOUL.md files
 - [Supergroup Setup Guide](docs/supergroup-setup.md) — Step-by-step Telegram setup
+- [Telegram DM Topics Guide](docs/telegram-dm-topics.md) — How to create and use forum topics inside a direct chat
 - [Scaling Your Team](docs/scaling.md) — Adding new agents and teams
 
 ---
