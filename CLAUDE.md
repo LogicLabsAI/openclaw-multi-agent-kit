@@ -30,7 +30,8 @@
 ├── docs/
 │   ├── agent-design-patterns.md       # How to write effective SOUL.md files
 │   ├── scaling.md                     # Scaling guidance: when to add agents, cost, circular triggers
-│   └── supergroup-setup.md            # Step-by-step Telegram supergroup setup
+│   ├── supergroup-setup.md            # Step-by-step Telegram supergroup setup (covers multi-bot + native topic routing)
+│   └── telegram-dm-topics.md          # Telegram DM forum topics guide
 ├── examples/
 │   ├── full-team.json                 # Complete 10-agent openclaw.json config
 │   └── minimal-team.json              # Minimal 3-agent config (orchestrator + coder + QA)
@@ -59,12 +60,20 @@
 
 ## Architecture — Key Concepts
 
-- **One bot per agent** — Each agent has its own Telegram bot token
+- **Three Telegram routing models** — Multi-bot routing, native topic routing, and DM forum topics (see docs/)
 - **One topic per team** — Teams share a topic channel in a supergroup
 - **Primary + Secondary agents** — Primary owns the topic; secondary responds only when @mentioned or triggered
 - **Shared context via markdown files** — Agents coordinate through THESIS.md, SIGNALS.md, FEEDBACK-LOG.md (not APIs)
 - **Bot-to-bot via `sessions_send`** — Telegram bots cannot see each other's messages; OpenClaw's `sessions_send` bridges them
 - **Structured escalation** — Agents escalate to orchestrator; orchestrator escalates to human
+
+### Telegram Routing Models
+
+| Model | Visibility | Best For |
+|-------|-----------|----------|
+| **Multi-bot routing** | Each agent has its own bot identity | Specialist teams with visible personas |
+| **Native topic routing** | One bot, different internal agents per topic | Clean single-bot UX with internal specialization |
+| **DM forum topics** | Topics inside a direct chat | Private 1:1 organized conversations |
 
 ### Team Layout (default)
 
